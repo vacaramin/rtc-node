@@ -1,0 +1,23 @@
+{
+  "name": "rtc-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/vacaramin/rtc-node.git",
+  "author": "Waqar Amin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vacaramin/rtc-node/issues"
+  },
+  "homepage": "https://github.com/vacaramin/rtc-node#readme",
+  "private": false,
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
