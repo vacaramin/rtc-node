@@ -4,14 +4,12 @@ require('dotenv').config()
 
 const app = express();
 const port = process.env.PORT || 4000;
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/test');
-
+const db = require('./initializers/connectdb');
 app.use(cors());
 
 // Require route files
-const userRoutes = require('./routes/userRoutes');
-const messageRoutes = require('./routes/messageRoutes');
+const userRoutes = require('./routes/user.routes');
+const messageRoutes = require('./routes/message.routes');
 
 // Use route files
 app.use('/users', userRoutes);

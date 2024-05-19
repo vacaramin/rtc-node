@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "yarn --cwd client run start",
     "server": "nodemon index",
-    "start": "concurrently \"yarn run server\" \"yarn run client\""
+    "start": "nodemon index"
   },
   "repository": "git+https://github.com/vacaramin/rtc-node.git",
   "author": "Waqar Amin",
@@ -22,6 +22,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "mongodb": "4.1",
     "mongoose": "^8.3.3",
     "nodemon": "^3.1.0"
   }
