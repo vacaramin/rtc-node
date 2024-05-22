@@ -1,8 +1,15 @@
 const mongoose = require('mongoose');
 
-module.exports = async function connectDB() {
-    const conn = await mongoose.connect('mongodb://localhost:27017/rtc-node')
-    conn.Error = console.error.bind(console, 'connection error:');
-    
-    console.log(`MongoDB connected: ${conn.connection.host}`);
+
+
+const connect = () =>{
+    return mongoose.connect("mongodb://localhost:27017/rtc-node")
 }
+
+
+module.exports = function connectDB() {
+    const conn = mongoose.connect('mongodb://localhost:27017/rtc-node')
+    conn.Error = console.error.bind(console, 'connection error:');
+    return conn;    
+}
+
